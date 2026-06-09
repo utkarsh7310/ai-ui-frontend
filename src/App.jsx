@@ -14,8 +14,7 @@ function App() {
     setGeneratedCode('');
     
     // API URL mein prompt ke saath brand parameter bhi bhej rahe hain
-    const apiUrl = `http://localhost:8080/api/v1/ui/generate?prompt=${encodeURIComponent(prompt)}&brand=${encodeURIComponent(brandUrl)}`;
-    
+     const apiUrl = `https://ai-ui-backend-vpaw.onrender.com/api/v1/ui/generate?prompt=${encodeURIComponent(prompt)}&brand=${encodeURIComponent(brandUrl)}`;
     fetch(apiUrl)
       .then(res => res.text())
       .then(htmlString => {
